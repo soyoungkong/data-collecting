@@ -8,7 +8,8 @@ import urllib.request
 
 hdr = {'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
                      'Chrome/96.0.4664.110 Safari/537.36'}
-req = urllib.request.Request('https://github.com/soyoungkong/data-collecting', headers=hdr)
+req = urllib.request.Request('http://unico2013.dothome.co.kr/crawling/header.php', header=hdr)
+# req = urllib.request.Request('http://unico2013.dothome.co.kr/crawling/header.php')
 data = urllib.request.urlopen(req).read()
 page = data.decode('utf-8', 'ignore')
 print(page)
